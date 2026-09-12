@@ -30,18 +30,64 @@ Because why lift weights when you can lift your hand in front of a webcam and ca
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+-Languages Used: JavaScript (ES6+), HTML5, CSS3
+
+-Frameworks Used: Vite (Development server and build tooling), Tailwind CSS (Utility-first styling framework)
+
+-Libraries Used:
+
+-@mediapipe/tasks-vision (Google MediaPipe library for real-time hand gesture recognition)
+
+-Tools Used: Visual Studio Code, Git, GitHub, Node.js, npm, Windows PowerShell
 
 For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+
+-Main Components:
+
+-Standard PC/Laptop system
+
+-HD Webcam / Integrated Camera Module
+
+-Specifications:
+
+-Processor: Dual-Core CPU @ 2.0GHz or higher
+
+-RAM: 4GB minimum (8GB recommended for hardware-accelerated MediaPipe model execution)
+
+-Camera Resolution: 720p at 30fps minimum
+
+-Tools Required: USB Connection interface (for external webcams), Web Browser supporting WebGL & WebRTC (Google Chrome, Microsoft Edge, Firefox, or Brave)
 
 ### Implementation
 For Software:
+
+-The software pipeline integrates computer vision into a web interface through a modular JavaScript architecture:
+
+-User Interface (index.html):
+
+-Uses HTML5 <video> and <canvas> elements to capture real-time webcam video streams.
+
+-Styled with Tailwind CSS utility classes to render responsive controls, exercise state indicators, and feedback counters.
+
+-Hand Gesture Recognition Module (gesture.js):
+
+-Initializes Google’s MediaPipe Vision tasks model using WebAssembly (wasm) and GPU acceleration.
+
+-Uses getUserMedia() WebRTC APIs to gain secure browser permissions for local camera access.
+
+-Runs an asynchronous continuous loop via requestAnimationFrame() to sample video frames.
+
+-Detects key hand landmarks and classifies hand shapes into pre-trained gesture categories (Closed_Fist, Thumb_Up, Victory, Open_Palm, Pointing_Up).
+
+-Implements a debouncing algorithm (cooldown timer) to prevent duplicate rep triggers during continuous gesture holds.
+
+-Application Control Logic (main.js):
+
+-Maps specific detected hand gestures to corresponding gym exercises (e.g., mapping a clenched fist to bench press or a peace sign to bicep curls).
+
+-Intercepts recognized gestures matching the currently active workout set.
+
+-Triggers event listeners to automatically increment rep counts and update state metrics in real time.
 # Installation
 [commands]
 
