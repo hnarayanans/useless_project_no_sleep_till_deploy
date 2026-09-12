@@ -41,6 +41,7 @@ function ponjikkaraImagePlugin() {
 }
 
 export default defineConfig({
+  base: './',
   plugins: [ponjikkaraImagePlugin()],
   server: {
     port: 5173,
