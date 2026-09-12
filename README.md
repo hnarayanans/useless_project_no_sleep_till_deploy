@@ -2,26 +2,30 @@
 
 
 
-# [Project Name] 🎯
+# PONJIKKARA 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: No_Sleep_Till_Deploy
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Harinarayanan S - NSS College Of Engineering
+- Member 2: Nidhin Shan - NSS College Of Engineering
 
 ### Project Description
-[2-3 lines about what your project does]
+Ponjikkara is a completely unnecessary virtual gym where you can “work out” without actually going to a gym. Using your camera and hand gestures, the system detects your movements and turns them into simple, funny virtual exercises and challenges.
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Going to the gym requires leaving your room, changing clothes, finding motivation, and actually exercising.
+Clearly, this is too much effort. 😭
+So we identified a serious problem:
+“How can I feel like I worked out without experiencing the inconvenience of going to the gym?”
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+Ponjikkara Virtual Gym™ brings the gym directly to your screen.
+Just turn on your camera, move your hands, and let Ponjikkara pretend you're exercising. Your gestures control the workout, challenges, and ridiculous virtual activities — no gym membership, no equipment, and preferably no actual effort.
+Because why lift weights when you can lift your hand in front of a webcam and call it fitness? 💀
 
 ## Technical Details
 ### Technologies/Components Used
