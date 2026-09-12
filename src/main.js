@@ -1,4 +1,5 @@
 import './style.css';
+import ponjiImg from 'virtual:ponjikkara-image';
 import confetti from 'canvas-confetti';
 import { WORKOUT_SPLITS, PONJIKKARA_QUOTES, FUNNY_TITLES, CINEMA_REACTIONS, EASTER_EGGS } from './data.js';
 import { sound } from './audio.js';
@@ -37,6 +38,7 @@ class PonjikkaraApp {
     this.renderMenuSplits();
     this.bindEvents();
     this.updateGlobalRepCounter();
+    this.setupPonjikkaraDoodles();
   }
   bindEvents() {
     document.getElementById("nav-home-btn").addEventListener("click", () => {
@@ -171,6 +173,36 @@ class PonjikkaraApp {
       sealBtn.addEventListener("click", () => {
         sound.playClick();
         this.showCinemaToast("🏆", EASTER_EGGS.SEAL, 4200);
+      });
+    }
+  }
+
+  setupPonjikkaraDoodles() {
+    document.querySelectorAll('.ponji-img-asset').forEach((img) => {
+      img.src = ponjiImg;
+    });
+
+    const homeDoodle = document.getElementById('home-ponji-doodle');
+    if (homeDoodle) {
+      homeDoodle.addEventListener('click', () => {
+        sound.playClick();
+        this.showCinemaToast('☕', 'ഇതും fitness തന്നെ... വിരലനങ്ങി ശരീരം ഉണ്ടാക്കാം!');
+      });
+    }
+
+    const workoutDoodle = document.getElementById('workout-ponji-doodle');
+    if (workoutDoodle) {
+      workoutDoodle.addEventListener('click', () => {
+        sound.playClick();
+        this.showCinemaToast('💪', 'ശരീരം അനങ്ങുന്നുണ്ട്. അത്ര തന്നെ മതി!');
+      });
+    }
+
+    const workoutMobileDoodle = document.getElementById('workout-ponji-mobile-doodle');
+    if (workoutMobileDoodle) {
+      workoutMobileDoodle.addEventListener('click', () => {
+        sound.playClick();
+        this.showCinemaToast('💪', 'ശരീരം അനങ്ങുന്നുണ്ട്. അത്ര തന്നെ മതി!');
       });
     }
   }

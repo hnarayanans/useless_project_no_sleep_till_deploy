@@ -299,4 +299,55 @@ body {
   pointer-events: auto;
 }
 
+/* Ponjikkara Cinema Doodle Easter Eggs */
+.ponji-doodle {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+.ponji-doodle:hover {
+  transform: translateY(-4px) rotate(0deg) scale(1.04) !important;
+}
+
+.ponji-doodle:active {
+  transform: translateY(1px) scale(0.98) !important;
+}
+
+@keyframes ponjiFloatHome {
+  0%, 100% {
+    transform: translateY(0) rotate(2.5deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+}
+
+@keyframes ponjiFloatWorkout {
+  0%, 100% {
+    transform: translateY(0) rotate(-2.5deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+.ponji-float-home {
+  animation: ponjiFloatHome 4s ease-in-out infinite;
+}
+
+.ponji-float-home:hover {
+  animation-play-state: paused;
+}
+
+.ponji-float-workout {
+  animation: ponjiFloatWorkout 4.2s ease-in-out infinite;
+}
+
+.ponji-float-workout:hover {
+  animation-play-state: paused;
+}
+
 

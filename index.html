@@ -61,7 +61,7 @@
     <section id="screen-menu" class="space-y-12 animate-fade-in">
       
       <!-- Clean Consumer Hero Section -->
-      <div class="text-center space-y-4 pt-4 pb-2 max-w-2xl mx-auto">
+      <div class="relative text-center space-y-4 pt-4 pb-2 max-w-2xl mx-auto">
         <div>
           <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 border border-blue-200/60 px-4 py-1 rounded-full mb-3">
             ✨ ഇത് workout ആണെന്ന് officially പ്രഖ്യാപിക്കുന്നു
@@ -106,6 +106,19 @@
           <span class="flex items-center gap-1">🥗 0.003 Kcal burned</span>
           <span class="hidden sm:inline">•</span>
           <span class="flex items-center gap-1">🏆 Official Printable Diploma</span>
+        </div>
+
+        <!-- Floating Malayalam Cinema Easter Egg Doodle (Desktop: Natural Whitespace on Right; Mobile: Centered Mini-Badge) -->
+        <div id="home-ponji-doodle" class="ponji-doodle-wrapper flex justify-center pt-2 md:pt-0 md:block md:absolute md:-right-6 lg:-right-24 xl:-right-28 md:top-4 lg:top-6 z-10" title="Mr. Ponjikkara - ഫിറ്റ്നസ് ഗുരു (Click for wisdom!)">
+          <div class="ponji-doodle ponji-float-home cursor-pointer group">
+            <div class="relative">
+              <img alt="Mr. Ponjikkara" class="ponji-img-asset w-20 sm:w-24 md:w-28 lg:w-32 aspect-[1170/937] object-cover rounded-2xl border-2 border-white shadow-md shadow-blue-500/15 group-hover:shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300" />
+              <div class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xs border border-blue-200 px-2.5 py-0.5 rounded-full shadow-xs text-[9px] sm:text-[10px] md:text-[11px] font-bold text-slate-800 whitespace-nowrap flex items-center gap-1 group-hover:border-blue-400 group-hover:text-blue-600 transition-colors">
+                <span>ഇതും fitness തന്നെ</span>
+                <span class="text-[9px]">☕</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -205,7 +218,7 @@
     </section>
 
     <!-- SCREEN 3: ACTIVE WORKOUT SCREEN (THE GYM FLOOR) -->
-    <section id="screen-workout" class="hidden space-y-6 animate-fade-in">
+    <section id="screen-workout" class="hidden space-y-6 animate-fade-in relative">
       
       <!-- Clean Minimal Header -->
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
@@ -223,12 +236,37 @@
           </p>
         </div>
 
-        <!-- Calories Burned Highlight -->
-        <div class="flex items-center gap-2 bg-slate-50 px-3.5 py-2 rounded-2xl border border-slate-200/80 w-fit">
-          <span class="text-base">🔥</span>
-          <div>
-            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">ENERGY BURNED</span>
-            <span id="active-calories-burned" class="text-xs sm:text-sm font-extrabold text-emerald-600 font-mono">0.0000 kcal</span>
+        <div class="flex items-center gap-3">
+          <!-- Mobile compact cinema doodle (shown on mobile/tablet, hidden on large screens) -->
+          <div id="workout-ponji-mobile-doodle" class="lg:hidden flex items-center cursor-pointer group" title="Coach Ponjikkara (Click for reaction!)">
+            <div class="relative">
+              <img alt="Coach Ponjikkara" class="ponji-img-asset w-14 sm:w-16 aspect-[1170/937] object-cover rounded-xl border-2 border-white shadow-sm shadow-blue-500/15 group-hover:scale-105 transition-transform" />
+              <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white/95 border border-blue-200 px-1.5 py-0.2 rounded-full text-[8px] font-bold text-slate-800 whitespace-nowrap shadow-2xs group-hover:border-blue-400 group-hover:text-blue-600 transition-colors">
+                <span>അനങ്ങുന്നുണ്ട്</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calories Burned Highlight -->
+          <div class="flex items-center gap-2 bg-slate-50 px-3.5 py-2 rounded-2xl border border-slate-200/80 w-fit">
+            <span class="text-base">🔥</span>
+            <div>
+              <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">ENERGY BURNED</span>
+              <span id="active-calories-burned" class="text-xs sm:text-sm font-extrabold text-emerald-600 font-mono">0.0000 kcal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop Floating Side Doodle (Right Whitespace: Never covers controls, counter or camera) -->
+      <div id="workout-ponji-doodle" class="hidden lg:block absolute right-0 top-32 xl:-right-6 w-28 xl:w-32 z-20" title="Coach Ponjikkara (Click for reaction!)">
+        <div class="ponji-doodle ponji-float-workout cursor-pointer group">
+          <div class="relative">
+            <img alt="Coach Ponjikkara" class="ponji-img-asset w-full aspect-[1170/937] object-cover rounded-2xl border-2 border-white shadow-md shadow-blue-500/15 group-hover:shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300" />
+            <div class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xs border border-blue-200 px-2.5 py-0.5 rounded-full shadow-xs text-[10px] xl:text-[11px] font-bold text-slate-800 whitespace-nowrap flex items-center gap-1 group-hover:border-blue-400 group-hover:text-blue-600 transition-colors">
+              <span>ശരീരം അനങ്ങുന്നുണ്ട്</span>
+              <span class="text-[9px]">💪</span>
+            </div>
           </div>
         </div>
       </div>
